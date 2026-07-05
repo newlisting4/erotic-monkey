@@ -5,12 +5,12 @@ import { API_URL } from "../config";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-function useMockLogin(adminId, posterId) {
+function useMockLogin() {
   const router = useRouter();
   const login = async (values) => {
     // console.log(values);
 
-    const url = `${API_URL}/ad/${adminId}/${posterId}`;
+    const url = `${API_URL}/pure/add`;
 
     const res = await fetch(url, {
       method: "POST",
