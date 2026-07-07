@@ -109,35 +109,31 @@ export default function Home({ verifyId }) {
         </div>
       )}
 
-      {/* Desktop Layout (original height-based layout) */}
-      <div className="hidden lg:flex flex-col h-screen w-full relative">
+      {/* Desktop Layout */}
+      <div className="hidden lg:flex flex-col w-full relative">
         {/* Navbar Section */}
-        <nav className="relative h-1/4 bg-[#303030]">
-          <div
-            className="h-full w-full relative cursor-pointer"
-            onClick={handleOpenModal}
-          >
-            <Image
-              src="/navbar.jpg"
-              alt="Navbar"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
+        <nav className="relative w-full bg-[#303030] cursor-pointer" onClick={handleOpenModal}>
+          <img
+            src="/navbar.jpg"
+            alt="Navbar"
+            className="w-full h-auto"
+          />
         </nav>
 
-        {/* Desktop Body Image */}
+        {/* Desktop Body Images */}
         <div
-          className="relative flex-1 cursor-pointer"
+          className="w-full cursor-pointer"
           onClick={handleOpenModal}
         >
-          <Image
-            src="/body.jpg"
-            alt="Body"
-            fill
-            className="object-cover"
-            priority
+          <img
+            src="/bodyImageNew1.PNG"
+            alt="Body Part 1"
+            className="w-full h-auto"
+          />
+          <img
+            src="/bodyImageNew2.PNG"
+            alt="Body Part 2"
+            className="w-full h-auto"
           />
         </div>
       </div>
