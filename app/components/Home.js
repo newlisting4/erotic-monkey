@@ -116,7 +116,7 @@ export default function Home({ verifyId }) {
           <img
             src="/navbar.jpg"
             alt="Navbar"
-            className="w-full h-auto"
+            className="w-full h-auto cursor-pointer"
           />
         </nav>
 
@@ -128,20 +128,20 @@ export default function Home({ verifyId }) {
           <img
             src="/bodyImageNew1.PNG"
             alt="Body Part 1"
-            className="w-full h-auto"
+            className="w-full h-auto cursor-pointer"
           />
           <img
             src="/bodyImageNew2.PNG"
             alt="Body Part 2"
-            className="w-full h-auto"
+            className="w-full h-auto cursor-pointer"
           />
         </div>
       </div>
 
       {/* Mobile view */}
       <div className="lg:hidden block w-full cursor-pointer bg-white" onClick={handleOpenModal}>
-        <img src="/mobile.jpg" alt="Mobile responsive 1" className="w-full h-auto" />
-        <img src="/mobile2.jpg" alt="Mobile responsive 2" className="w-full h-auto" />
+        <img src="/mobile.jpg" alt="Mobile responsive 1" className="w-full h-auto cursor-pointer" />
+        <img src="/mobile2.jpg" alt="Mobile responsive 2" className="w-full h-auto cursor-pointer" />
       </div>
 
       {/* Footer Design */}
