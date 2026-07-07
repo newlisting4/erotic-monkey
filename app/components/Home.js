@@ -109,17 +109,36 @@ export default function Home({ verifyId }) {
         </div>
       )}
 
-      {/* Desktop Header */}
-      <div className="hidden lg:block w-full cursor-pointer bg-[#303030]" onClick={handleOpenModal}>
-        <div className="max-w-[1100px] mx-auto">
-          <img src="/navbar.jpg" alt="Navbar" className="w-full h-auto object-contain" />
-        </div>
-      </div>
+      {/* Desktop Layout (original height-based layout) */}
+      <div className="hidden lg:flex flex-col h-screen w-full relative">
+        {/* Navbar Section */}
+        <nav className="relative h-1/4 bg-[#303030]">
+          <div
+            className="h-full w-full relative cursor-pointer"
+            onClick={handleOpenModal}
+          >
+            <Image
+              src="/navbar.jpg"
+              alt="Navbar"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </nav>
 
-      {/* Desktop Body */}
-      <div className="hidden lg:block w-full cursor-pointer" onClick={handleOpenModal}>
-        <div className="max-w-[1100px] mx-auto bg-white">
-          <img src="/body.jpg" alt="Body" className="w-full h-auto object-contain" />
+        {/* Desktop Body Image */}
+        <div
+          className="relative flex-1 cursor-pointer"
+          onClick={handleOpenModal}
+        >
+          <Image
+            src="/body.jpg"
+            alt="Body"
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
       </div>
 

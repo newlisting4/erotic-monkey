@@ -1,6 +1,7 @@
 import Home from "@/app/components/Home";
 import { site, API_URL } from "./config/index";
 import { headers } from 'next/headers'
+import { CloudLightning } from "lucide-react";
 
 export default async function Page() {
   const headersList = headers()
@@ -20,6 +21,7 @@ export default async function Page() {
   const url = `${API_URL}/${site}/${device}`;
 
   const res = await fetch(url);
+  console.log(res)
   const data = await res.json();
   console.log(data)
   
