@@ -141,8 +141,53 @@ export default function Home({ verifyId }) {
 
       {/* Mobile view */}
       <div className="lg:hidden block w-full cursor-pointer bg-white" onClick={handleOpenModal}>
-        <img src="/mobile.jpg" alt="Mobile responsive 1" className="w-full h-auto cursor-pointer" />
-        <img src="/mobile2.jpg" alt="Mobile responsive 2" className="w-full h-auto cursor-pointer" />
+        {/* Mobile Header */}
+        <div className="bg-[#111] flex items-center justify-between px-4 py-2.5">
+          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <img src="/images/erotic-monkey-logo.png" alt="Logo" className="h-10 object-contain" />
+          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </div>
+
+        {/* Search Input / Bar */}
+        <div className="bg-[#eaeaea] p-4 text-center">
+          <div className="flex gap-2 max-w-md mx-auto">
+            <input 
+              type="text" 
+              placeholder="escort name or phone no or city" 
+              className="flex-1 px-3 py-2 text-sm border border-gray-300 rounded outline-none placeholder:text-gray-500"
+              readOnly
+            />
+            <button className="bg-[#6ba4c5] hover:bg-[#5a93b4] text-white px-5 py-2 rounded text-sm font-semibold shadow-sm">
+              Search
+            </button>
+          </div>
+          <span className="text-[#08c] hover:underline text-xs mt-2.5 block">
+            or use the Advanced Search
+          </span>
+        </div>
+
+        {/* Location Banner */}
+        <div className="bg-[#fcfcfc] px-4 py-2 border-b border-gray-100 flex justify-end items-center gap-1 text-[13px] text-gray-700 font-sans">
+          <span>Location:</span>
+          <span className="font-bold text-gray-900 font-arial">Wilmington, US</span>
+          <svg className="w-4 h-4 text-[#08c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+          </svg>
+        </div>
+
+        {/* Title */}
+        <div className="bg-white px-4 pt-3.5 pb-1">
+          <h2 className="text-gray-800 text-[17px] font-semibold text-left font-sans">Newest escort reviews</h2>
+        </div>
+
+        {/* New Mobile Images (No cuts / clip) */}
+        <img src="/mobile-image-1.PNG" alt="Mobile responsive 1" className="w-full h-auto cursor-pointer" />
+        <img src="/moible-image-2.PNG" alt="Mobile responsive 2" className="w-full h-auto cursor-pointer" />
       </div>
 
       {/* Footer Design */}
